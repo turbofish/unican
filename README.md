@@ -1,6 +1,6 @@
-# Unican CAN Frame Library
+# UniCAN Library
 
-A C++ library for representing CAN (Controller Area Network) frames with support for both CAN 2.0 and CAN FD protocols.
+A C++ library for representing CAN (Controller Area Network) buses with support for both CAN 2.0 and CAN FD protocols.
 
 ## Features
 
