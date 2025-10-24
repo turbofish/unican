@@ -6,7 +6,6 @@ using namespace unican;
 
 int main(int argc, char** argv)
 {
-    // Use factory pattern to create the appropriate bus type
     std::string bus_type = "socketcan";  // Can be "socketcan", "kvaser", or "null"
     std::string interface_name = "vcan0";
     
@@ -19,12 +18,12 @@ int main(int argc, char** argv)
     }
     
     try {
-        // Create bus using factory
-        auto bus = createBus(bus_type, interface_name);
+	// Create bus
+	auto bus = createBus(bus_type, interface_name);
         
         std::cout << "Created bus: " << bus->getDeviceInfo() << std::endl;
         
-        // Configure and start
+        // Configure and start (bitrate is meaningless for a socketcan...)
         bus->setBitrate(500000);
         bus->start();
         
